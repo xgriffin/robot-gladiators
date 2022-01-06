@@ -61,7 +61,6 @@ var fight = function (enemy) {
         // if true, leave fight by breaking loop
         break;
       }
-    }
 
     var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
     // remove enemy's health by subtracting the amount set in the playerInfo.attack variable
@@ -112,9 +111,11 @@ var fight = function (enemy) {
       break;
     } else {
       window.alert(
-        playerInfo.name + " still has " + playerInfo.health + " health left."
-      );
+        playerInfo.name + " still has " + playerInfo.health + " health left.");
     }
+  }
+  // switch turn order for next round
+  isPlayerTurn = !isPlayerTurn;
   }
 };
 
